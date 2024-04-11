@@ -33,10 +33,12 @@ class Lang:
         return text
 
     def addSentence(self, sentence):
+        
         for word in sentence.split(' '):
             wrd = self.clean_text(word)
             self.addWord(wrd)
-
+        
+            
     def addWord(self, word):
         
         if word not in self.word2index:
@@ -46,4 +48,26 @@ class Lang:
             self.n_words += 1
         else:
             self.word2count[word] += 1
+    
+    
+    def get_index2word(self):
+        return self.index2word
+    
+    def get_word2index(self):
+        return self.word2index
             
+
+# corpus = [
+#     "هذا نص عربي",
+#     "هذا نص اخر",
+#     "نص باللغة العربية"
+# ]
+
+# indexer = Lang()
+
+# for sent in corpus:
+#     indexer.addSentence(sent)
+    
+# print(indexer.word2index)
+# print(indexer.index2word)
+    

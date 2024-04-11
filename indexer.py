@@ -45,13 +45,13 @@ class ArabicCorpusIndexer:
         # Returns the index of the word if it exists, otherwise None
         return self.word_index.get(word)
 
-# # Example usage:
+
 # corpus = [
 #     "هذا نص عربي",
-#     "هذا نص آخر",
+#     "هذا نص اخر",
 #     "نص باللغة العربية"
 # ]
 
 # indexer = ArabicCorpusIndexer(corpus)
-# print(indexer.get_index("نص"))  # Example to get the index of a specific word
-# print(indexer.word_index)       # To see the entire word-index mapping
+# print(indexer.get_index("نص"))  
+# print(indexer.word_index)       
