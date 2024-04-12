@@ -1,14 +1,15 @@
 import re
 SOS_token = 0
 EOS_token = 1
+PAD_token = 2
 
 class Lang:
     def __init__(self):
 
-        self.word2index = {}
+        self.word2index = {"SOS":0 ,"EOS":1,'<PAD>': 2}
         self.word2count = {}
-        self.index2word = {0: "SOS", 1: "EOS"}
-        self.n_words = 2  # Count SOS and EOS
+        self.index2word = {0: "SOS", 1: "EOS", 2: "<PAD>"}
+        self.n_words = 3  # Count SOS and EOS
         
     def clean_text(self, text):
         # Remove emojis
