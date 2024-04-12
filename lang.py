@@ -34,7 +34,7 @@ class Lang:
 
     def addSentence(self, sentence):
         
-        for word in sentence.split(' '):
+        for word in sentence.split():
             wrd = self.clean_text(word)
             self.addWord(wrd)
         
